@@ -2,8 +2,10 @@
 interface Props {
 	title: string;
 }
-
-const { title="Mugafrey Investments." } = Astro.props;
+// 0785 979 484
+const { title="Mugafrey Investments" } = Astro.props;
+import Header from './Header';
+import Footer from "./Footer"
 ---
 
 <!DOCTYPE html>
@@ -16,28 +18,59 @@ const { title="Mugafrey Investments." } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
+
 	<body>
-		<slot />
+		<Header />
+		<main class="pt-10">
+			<slot />
+		</main>
+		<Footer />
 	</body>
 </html>
 
 <style is:global>
+	@tailwind base;
+	/* @tailwind components;
+	@tailwind utilities; */
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
 	}
-	html {
+	*,html {
 		font-family: "ABeeZee", sans-serif;
+	}
+	body {
 		background: #13151A;
 		color: #f7f7f7;
 	}
-	body {
-		font-weight: 5rem;
-	}
-	h1,h2,h3 {
+	h1,h2,h3,h4 {
 		font-weight: 700;
 		font-family: "Space Grotesk", sans-serif;
+	}
+
+	@layer base{
+		a:not(.header) {
+			@apply text-[rgba(255,255,255,0.7)] transition-colors duration-300  hover:text-white;
+		}
+		/* hover:underline-offset-4 hover:underline */
+		a.dash {
+			@apply  relative before:absolute before:content-[""] hover:before:w-full before:h-[2px] before:-bottom-1.5 before:left-0 before:invisible hover:before:visible before:w-0 before:transition-all before:duration-300;
+		}
+		a.dash.color {
+			@apply before:bg-red-400;
+		}
+		a.dash.white {
+			@apply before:bg-white;
+		}
+		.social-links a {
+			@apply no-underline;
+		}
+		.wrapper {
+			@apply container mx-auto px-4;
+		}
+		.social-links a {
+			@apply flex items-center justify-center w-10 h-10 rounded-full border-[1px] border-[rgba(255,255,255,0.2)] mr-2.5 last:mr-0 hover:border-white;
+		}
+		footer ul li {
+			@apply py-1.5 first:pt-0 last:pb-0;
+		}
 	}
 </style>

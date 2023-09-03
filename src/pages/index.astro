@@ -1,8 +1,15 @@
 ---
 import Layout from '~/components/Layout.astro';
+import Stats from '~/components/Stats.astro';
+import Team from "~/components/Team.astro"
+import Faqs from "~/components/Faqs.astro"
+import Features from '~/components/Features.astro';
+
 ---
 
 <Layout title="Mugafrey Investments.">
-	<h1 class="text-5xl text-center mb-5">This is the home Page</h1>
-	<p>Hello World, What's good!</p>
+	<Features />
+	<Stats />
+	<Team />
+	<Faqs />
 </Layout>

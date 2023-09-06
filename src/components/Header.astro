@@ -1,88 +1,85 @@
-<header class='bg-purple-800 min-h-[60px] flex items-center'>
-  <div class='wrapper flex justify-between items-center relative'>
-    <a href='/' class='flex items-center text-white'>
-      <h1 class='text-3xl text-white scale-[0.99] hover:scale-100 transition'>
-        Mugafrey<span class='text-red-400'>.</span>
-      </h1>
+---
+import { Image } from "astro:assets";
+import logoImg from "~/assets/images/logo.png";
+---
+
+<header
+  class="fixed top-0 left-0 w-full min-h-[60px] flex items-center bg-[var(--background-color)] z-40"
+>
+  <div class="wrapper flex justify-between items-center relative">
+    <a href="/" class="flex items-center text-white">
+      <Image
+        src={logoImg}
+        alt="logo image"
+        class="w-[150px] md:w-[175px] h-auto scale-[0.99] hover:scale-100 transition"
+      />
     </a>
-    
-    <nav>
+
+    <nav class="z-50">
       <svg
-            class='mobile_close_btn cursor-pointer lg:hidden'
-            width='20'
-            height='20'
-            viewBox='0 0 16 16'
-            xmlns='http://www.w3.org/2000/svg'
-          >
-            <path
-              d='M6.586 8L.293 1.707c-.39-.39-.39-1.024 0-1.414.39-.39 1.024-.39 1.414 0L8 6.586 14.293.293c.39-.39 1.024-.39 1.414 0 .39.39.39 1.024 0 1.414L9.414 8l6.293 6.293c.39.39.39 1.024 0 1.414-.39.39-1.024.39-1.414 0L8 9.414l-6.293 6.293c-.39.39-1.024.39-1.414 0-.39-.39-.39-1.024 0-1.414L6.586 8z'
-              fill='#F7F7F7'
-              fill-rule='evenodd'
-            />
+        class="mobile_close_btn cursor-pointer lg:hidden"
+        width="20"
+        height="20"
+        viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6.586 8L.293 1.707c-.39-.39-.39-1.024 0-1.414.39-.39 1.024-.39 1.414 0L8 6.586 14.293.293c.39-.39 1.024-.39 1.414 0 .39.39.39 1.024 0 1.414L9.414 8l6.293 6.293c.39.39.39 1.024 0 1.414-.39.39-1.024.39-1.414 0L8 9.414l-6.293 6.293c-.39.39-1.024.39-1.414 0-.39-.39-.39-1.024 0-1.414L6.586 8z"
+          fill="#F7F7F7"
+          fill-rule="evenodd"></path>
       </svg>
       <ul>
         <li>
-          <a href="#home">
-            Home
-          </a>
+          <a class="dash color" href="#home"> Home</a>
         </li>
         <li>
-          <a href="#about">
-            About
-          </a>
+          <a class="dash color" href="#about"> About</a>
         </li>
         <li>
-          <a href="#portfolio">
-            Portfolio
-          </a>
+          <a class="dash color" href="#services"> Services</a>
         </li>
         <li>
-          <a href="#services">
-            Services
-          </a>
+          <a class="dash color" href="#faqs"> Faqs</a>
         </li>
         <li>
-          <a href="#team">
-            Team
-          </a>
+          <a class="dash color" href="#team"> Team</a>
         </li>
         <li>
-          <a href="#contact">
-            Contact
-          </a>
+          <a class="dash color" href="#contact"> Contact</a>
         </li>
       </ul>
     </nav>
-    
-    <div class='mobile-toggler flex items-center lg:hidden'>
+
+    <div class="mobile-toggler flex items-center lg:hidden">
       <svg
-        class='mobile_open_btn cursor-pointer'
-        width='20'
-        height='20'
-        viewBox='0 0 16 16'
-        xmlns='http://www.w3.org/2000/svg'
+        class="mobile_open_btn cursor-pointer"
+        width="20"
+        height="20"
+        viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d='M15 14c.552 0 1-.448 1-1s-.448-1-1-1H9c-.552 0-1 .448-1 1s.448 1 1 1h6zm0-5c.552 0 1-.448 1-1s-.448-1-1-1H1c-.552 0-1 .448-1 1s.448 1 1 1h14zm0-5c.552 0 1-.448 1-1s-.448-1-1-1H5c-.552 0-1 .448-1 1s.448 1 1 1h10z'
-          fill='#F7F7F7'
-          fill-rule='evenodd'
-        />
+          d="M15 14c.552 0 1-.448 1-1s-.448-1-1-1H9c-.552 0-1 .448-1 1s.448 1 1 1h6zm0-5c.552 0 1-.448 1-1s-.448-1-1-1H1c-.552 0-1 .448-1 1s.448 1 1 1h14zm0-5c.552 0 1-.448 1-1s-.448-1-1-1H5c-.552 0-1 .448-1 1s.448 1 1 1h10z"
+          fill="#F7F7F7"
+          fill-rule="evenodd"></path>
       </svg>
     </div>
   </div>
 </header>
 
 <script>
-  let bodyElement = document.querySelector("body") as HTMLBodyElement
-  let mobileOpenBtn = document.querySelector(".mobile_open_btn") as HTMLElement
-  let mobileCloseBtn = document.querySelector(".mobile_close_btn") as HTMLElement
+  let bodyElement = document.querySelector("body") as HTMLBodyElement;
+  let mobileOpenBtn = document.querySelector(".mobile_open_btn") as HTMLElement;
+  let mobileCloseBtn = document.querySelector(
+    ".mobile_close_btn"
+  ) as HTMLElement;
 
-  function toggleMobileNav():void {
-    bodyElement.classList.toggle("mobile-nav-active")
+  function toggleMobileNav(): void {
+    bodyElement.classList.toggle("mobile-nav-active");
   }
 
   if (bodyElement && mobileOpenBtn) {
-      mobileOpenBtn.addEventListener("click", ()=> toggleMobileNav())
-      mobileCloseBtn.addEventListener("click", ()=> toggleMobileNav())
+    mobileOpenBtn.addEventListener("click", () => toggleMobileNav());
+    mobileCloseBtn.addEventListener("click", () => toggleMobileNav());
   }
 </script>

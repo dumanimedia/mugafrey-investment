@@ -2,43 +2,110 @@
 @tailwind components;
 @tailwind utilities;
 
-*,
-html {
-  font-family: 'ABeeZee', sans-serif;
+:root {
+  --tartiary-color-rgb: 255, 255, 255;
+  --background-color-rgb: 22, 22, 35;
+  --dark-blue-color-rgb: 0, 0, 50;
+  --light-blue-color-rgb: 0, 111, 185;
+  --dark-green-color-rgb: 0, 83, 34;
+  --light-green-color-rgb: 57, 181, 74;
+  --tartiary-color: rgb(var(--tartiary-color-rgb));
+  --background-color: rgb(var(--background-color-rgb));
+  --dark-blue-color: rgb(var(--dark-blue-color-rgb));
+  --light-blue-color: rgb(var(--light-blue-color-rgb));
+  --dark-green-color: rgb(var(--dark-green-color-rgb));
+  --light-green-color: rgb(var(--light-green-color-rgb));
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
-  background: #13151a;
-  color: #f7f7f7;
+  font-family: "ABeeZee", sans-serif;
+  background: var(--background-color);
+  color: var(--tartiary-color);
 }
 h1,
 h2,
 h3,
 h4 {
   font-weight: 700;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
+}
+img {
+  max-width: 100%;
 }
 
-@layer base {
-  .wrapper {
-    @apply container mx-auto px-4;
-  }
-  .social-links a {
-    @apply flex items-center justify-center w-10 h-10 rounded-full border-[1px] border-[rgba(255,255,255,0.2)] mr-2.5 last:mr-0 hover:border-white;
-  }
+.section-header {
+  text-align: center;
+  padding: 30px 0;
+  position: relative;
+}
+
+.section-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  color: var(--tartiary-color);
+  position: relative;
+  z-index: 2;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-header h2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--light-green-color);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.section-header span {
+  position: absolute;
+  top: 34px;
+  color: rgba(197, 197, 197, 0.06);
+  left: 0;
+  right: 0;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 42px;
+  text-transform: uppercase;
+  line-height: 1;
+  pointer-events: none;
 }
 
 @layer components {
+  .wrapper {
+    @apply container mx-auto px-4;
+  }
+  p {
+    @apply text-[rgba(var(--tartiary-color-rgb),0.7)];
+  }
   a:not(.header) {
-    @apply text-[rgba(255,255,255,0.7)] transition-colors duration-300  hover:text-white;
+    @apply text-[rgba(var(--tartiary-color-rgb),0.7)] transition-colors duration-300  hover:text-[var(--light-blue-color)];
   }
   a.dash {
     @apply relative before:absolute before:content-[""] hover:before:w-full before:h-[2px] before:-bottom-1.5 before:left-0 before:invisible hover:before:visible before:w-0 before:transition-all before:duration-300;
   }
   a.dash.color {
-    @apply before:bg-red-400;
+    @apply before:bg-[var(--light-blue-color)];
   }
-  a.dash.white {
-    @apply before:bg-white;
+  a.dash.plain {
+    @apply before:bg-[var(--light-blue-color)];
+  }
+  .social-links a {
+    @apply flex items-center justify-center w-10 h-10 rounded-full border-[1px] border-[rgba(var(--tartiary-color-rgb),0.2)] mr-2.5 last:mr-0 hover:border-[var(--light-blue-color)];
   }
   footer ul li {
     @apply py-1.5 first:pt-0 last:pb-0;
@@ -60,15 +127,6 @@ h4 {
   }
 }
 @media (width < 1024px) {
-  /* body.mobile-nav-active header nav ul {
-    @apply flex items-center;
-  }
-  body.mobile-nav-active header nav ul li {
-    @apply whitespace-nowrap xl:relative;
-  }
-  body.mobile-nav-active header nav ul li a {
-    @apply pt-1.5 mx-[14px] dash color;
-  } */
   body header nav {
     @apply fixed flex items-start justify-end right-0 top-0 bottom-0 left-0 bg-black bg-opacity-40 transition-transform duration-300;
   }
@@ -79,6 +137,18 @@ h4 {
     transform: translateX(0%);
   }
   body.mobile-nav-active header nav ul {
-    @apply p-4 w-full h-full max-w-xs bg-red-500;
+    @apply p-4 w-full h-full max-w-xs bg-[var(--background-color)] pt-12;
+  }
+  body.mobile-nav-active header nav ul li {
+    @apply py-2.5;
+  }
+  body.mobile-nav-active header nav ul li:first-child {
+    @apply pt-0;
+  }
+  body.mobile-nav-active header nav ul li:last-child {
+    @apply pb-0;
+  }
+  body.mobile-nav-active header nav svg {
+    @apply absolute right-5 top-5;
   }
 }

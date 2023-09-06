@@ -1,0 +1,185 @@
+---
+import { Image } from "astro:assets";
+
+import cargoService from "~/assets/images/services/cargo.jpg";
+import logisticsService from "~/assets/images/services/logistics.jpg";
+import packagingService from "~/assets/images/services/packaging.jpg";
+import storageService from "~/assets/images/services/storage.jpg";
+import truckingService from "~/assets/images/services/trucking.jpg";
+import warehousingService from "~/assets/images/services/warehousing.jpg";
+---
+
+<section id="services" class="py-20 my-10">
+  <div class="wrapper">
+    <div class="section-header">
+      <span>Our services</span>
+      <h2 class="title">Our services</h2>
+    </div>
+
+    <div
+      class="services-list flex items-center gap-x-4 lg:gap-x-8 gap-y-10 xs:justify-center sm:justify-start flex-wrap"
+    >
+      <div
+        class="service w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.33%-32px)] border border-[rgba(var(--dark-blue-color-rgb), 0.15)]"
+      >
+        <a href="/" class="service--container group">
+          <div
+            class="service--img flex items-center justify-center relative overflow-hidden"
+          >
+            <Image
+              src={storageService}
+              alt="cargoService"
+              class="scale-100 group-hover:scale-105 transition-scale duration-300"
+            />
+          </div>
+          <div class="px-[30px]">
+            <h3
+              class="transition-colors ease-in-out group-hover:text-[var(--light-blue-color)] pt-5 pb-3 text-2xl"
+            >
+              Storage
+            </h3>
+            <p class="mb-8 leading-wide">
+              Cumque eos in qui numquam. Aut aspernatur perferendis sed atque
+              quia voluptas quisquam repellendus temporibus itaqueofficiis odit
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <div
+        class="service w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.33%-32px)] border border-[rgba(var(--dark-blue-color-rgb), 0.15)]"
+      >
+        <a href="/" class="service--container group">
+          <div
+            class="service--img flex items-center justify-center relative overflow-hidden"
+          >
+            <Image
+              src={logisticsService}
+              alt="cargoService"
+              class="scale-100 group-hover:scale-105 transition-scale duration-300"
+            />
+          </div>
+          <div class="px-[30px]">
+            <h3
+              class="transition-colors ease-in-out group-hover:text-[var(--light-blue-color)] pt-5 pb-3 text-2xl"
+            >
+              logistics
+            </h3>
+            <p class="mb-8 leading-wide">
+              Cumque eos in qui numquam. Aut aspernatur perferendis sed atque
+              quia voluptas quisquam repellendus temporibus itaqueofficiis odit
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <div
+        class="service w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.33%-32px)] border border-[rgba(var(--dark-blue-color-rgb), 0.15)]"
+      >
+        <a href="/" class="service--container group">
+          <div
+            class="service--img flex items-center justify-center relative overflow-hidden"
+          >
+            <Image
+              src={cargoService}
+              alt="cargoService"
+              class="scale-100 group-hover:scale-105 transition-scale duration-300"
+            />
+          </div>
+          <div class="px-[30px]">
+            <h3
+              class="transition-colors ease-in-out group-hover:text-[var(--light-blue-color)] pt-5 pb-3 text-2xl"
+            >
+              Cargo
+            </h3>
+            <p class="mb-8 leading-wide">
+              Cumque eos in qui numquam. Aut aspernatur perferendis sed atque
+              quia voluptas quisquam repellendus temporibus itaqueofficiis odit
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <div
+        class="service w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.33%-32px)] border border-[rgba(var(--dark-blue-color-rgb), 0.15)]"
+      >
+        <a href="/" class="service--container group">
+          <div
+            class="service--img flex items-center justify-center relative overflow-hidden"
+          >
+            <Image
+              src={truckingService}
+              alt="cargoService"
+              class="scale-100 group-hover:scale-105 transition-scale duration-300"
+            />
+          </div>
+          <div class="px-[30px]">
+            <h3
+              class="transition-colors ease-in-out group-hover:text-[var(--light-blue-color)] pt-5 pb-3 text-2xl"
+            >
+              Trucking
+            </h3>
+            <p class="mb-8 leading-wide">
+              Cumque eos in qui numquam. Aut aspernatur perferendis sed atque
+              quia voluptas quisquam repellendus temporibus itaqueofficiis odit
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <div
+        class="service w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.33%-32px)] border border-[rgba(var(--dark-blue-color-rgb), 0.15)]"
+      >
+        <a href="/" class="service--container group">
+          <div
+            class="service--img flex items-center justify-center relative overflow-hidden"
+          >
+            <Image
+              src={packagingService}
+              alt="cargoService"
+              class="scale-100 group-hover:scale-105 transition-scale duration-300"
+            />
+          </div>
+          <div class="px-[30px]">
+            <h3
+              class="transition-colors ease-in-out group-hover:text-[var(--light-blue-color)] pt-5 pb-3 text-2xl"
+            >
+              packaging
+            </h3>
+            <p class="mb-8 leading-wide">
+              Cumque eos in qui numquam. Aut aspernatur perferendis sed atque
+              quia voluptas quisquam repellendus temporibus itaqueofficiis odit
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <div
+        class="service w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.33%-32px)] border border-[rgba(var(--dark-blue-color-rgb), 0.15)]"
+      >
+        <a href="/" class="service--container group">
+          <div
+            class="service--img flex items-center justify-center relative overflow-hidden"
+          >
+            <Image
+              src={warehousingService}
+              alt="cargoService"
+              class="scale-100 group-hover:scale-105 transition-scale duration-300"
+            />
+          </div>
+          <div class="px-[30px]">
+            <h3
+              class="transition-colors ease-in-out group-hover:text-[var(--light-blue-color)] pt-5 pb-3 text-2xl"
+            >
+              warehousing
+            </h3>
+            <p class="mb-8 leading-wide">
+              Cumque eos in qui numquam. Aut aspernatur perferendis sed atque
+              quia voluptas quisquam repellendus temporibus itaqueofficiis odit
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

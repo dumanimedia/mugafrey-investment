@@ -1,0 +1,66 @@
+---
+import { getImage } from "astro:assets";
+import ctaImage from "~/assets/images/cta-bg.jpg";
+
+const optimizedImg = await getImage({ src: ctaImage });
+---
+
+<section
+  style={`background: linear-gradient(rgba(14, 20, 40, 0.6), rgba(14, 20, 40, 0.8)), url(${optimizedImg.src}) center center;`}
+  class="bg-fixed bg-center"
+>
+  <div class="wrapper mb-10 py-10">
+    <div class="section-header">
+      <span>Request a Callback</span>
+      <h2>Request a Callback</h2>
+      <p class="text-[var(--tartiary-color)] font-semibold">
+        We'll get back to you as soon as possible, that's our promise
+      </p>
+    </div>
+    <form
+      class="sm:backdrop-blur-sm w-full flex items-center gap-x-3 gap-y-6 justify-center flex-wrap py-5 sm:px-5 sm:border-2 rounded-lg border-[var(--dark-green-color)]"
+    >
+      <div class="w-full lg:w-[calc(33.33%-16px)] relative">
+        <input
+          required
+          class="transition-all duration-300 w-full p-4 rounded-xl bg-[var(--background-color)] bg-opacity-40 text-[var(--tartiary-color)]"
+          type="text"
+          id="name"
+          placeholder="Full Name"
+        />
+      </div>
+      <div class="w-full lg:w-[calc(33.33%-16px)] relative">
+        <input
+          required
+          class="transition-all duration-300 w-full p-4 rounded-xl bg-[var(--background-color)] bg-opacity-40 text-[var(--tartiary-color)]"
+          type="email"
+          id="email"
+          placeholder="E-mail Address"
+        />
+      </div>
+      <div class="w-full lg:w-[calc(33.33%-16px)] relative">
+        <input
+          required
+          class="transition-all duration-300 w-full p-4 rounded-xl bg-[var(--background-color)] bg-opacity-40 text-[var(--tartiary-color)]"
+          type="text"
+          id="subject"
+          placeholder="Subject"
+        />
+      </div>
+      <div class="w-full">
+        <textarea
+          required
+          class="w-full p-4 bg-[var(--background-color)] bg-opacity-40 text-[var(--tartiary-color)] transition-all duration-300 rounded-lg min-h-[250px]"
+          name="message"
+          id="message"
+          placeholder="Your message"></textarea>
+      </div>
+      <div class="w-full flex items-center justify-center">
+        <button
+          class="outline-none uppercase font-bold px-6 py-3 transition-colors duration-300 rounded-full bg-[var(--dark-green-color)] hover:bg-[var(--light-green-color)] focus:bg-[var(--light-green-color)] text-[var(--tartiary-color)]"
+          type="submit">Send Message</button
+        >
+      </div>
+    </form>
+  </div>
+</section>

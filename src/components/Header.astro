@@ -1,11 +1,61 @@
 ---
 import { Image } from "astro:assets";
 import logoImg from "~/assets/images/logo.png";
+import clockIcon from "~/assets/images/icons/clock.svg";
+import phoneIcon from "~/assets/images/icons/phone.svg";
 ---
 
 <header
-  class="fixed top-0 left-0 w-full min-h-[60px] flex items-center bg-[var(--background-color)] z-40"
+  class="absolute top-0 left-0 w-full min-h-[72px] flex items-center justify-center flex-col z-40"
 >
+  <div
+    class="wrapper my-3 text-sm topbar md:flex justify-between items-center relative hidden"
+  >
+    <div class="flex items-center gap-4">
+      <span class="flex mr-2"
+        ><Image class="mr-2" src={clockIcon} alt="phone icon" />
+        <span>Mon-Fri 09:00-17:00</span></span
+      >
+      <a class="flex" href="tel:+256 772 037464"
+        ><Image class="mr-2" src={phoneIcon} alt="phone icon" />
+        <span>+256 772 037464</span></a
+      >
+    </div>
+    <div class="social-links flex">
+      <a
+        href="https://www.facebook.com/mugafreyinvestment/"
+        target="_blank"
+        class="border-none p-0 !w-4 !h-0"
+        rel="noopener noreferrer"
+      >
+        <i>fb</i>
+      </a>
+      <a
+        href="https://www.twitter.com/mugafreyinvestment/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="border-none p-0 !w-4 !h-0"
+      >
+        <i>tw</i>
+      </a>
+      <a
+        href="https://www.instagram.com/mugafreyinvestment/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="border-none p-0 !w-4 !h-0"
+      >
+        <i>ig</i>
+      </a>
+      <a
+        href="https://www.linkedin.com/mugafreyinvestment/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="border-none p-0 !w-4 !h-0"
+      >
+        <i>li</i>
+      </a>
+    </div>
+  </div>
   <div class="wrapper flex justify-between items-center relative">
     <a href="/" class="flex items-center text-white">
       <Image
@@ -30,22 +80,25 @@ import logoImg from "~/assets/images/logo.png";
       </svg>
       <ul>
         <li>
-          <a class="dash color" href="#home"> Home</a>
+          <a class="dash color" href="/#hero"> Home</a>
         </li>
         <li>
-          <a class="dash color" href="#about"> About</a>
+          <a class="dash color" href="/about"> About</a>
         </li>
         <li>
-          <a class="dash color" href="#services"> Services</a>
+          <a class="dash color" href="/#services"> Services</a>
         </li>
         <li>
-          <a class="dash color" href="#faqs"> Faqs</a>
+          <a class="dash color" href="/#faqs"> Faqs</a>
         </li>
         <li>
-          <a class="dash color" href="#contact"> Contact</a>
+          <a class="dash color" href="/contact"> Contact</a>
         </li>
         <li>
-          <a href="/get-a-quote" class="bg-[var(--dark-green-color)] !text-[var(--tartiary-color)] hover:!text-[var(--tartiary-color)] hover:bg-[var(--light-green-color)] px-3 py-2.5 rounded-[4px]">
+          <a
+            href="/get-a-quote"
+            class="bg-[var(--dark-green-color)] !text-[var(--tartiary-color)] hover:!text-[var(--tartiary-color)] hover:bg-[var(--light-green-color)] px-3 py-2.5 rounded-[4px]"
+          >
             Get A Quote
           </a>
         </li>
@@ -75,10 +128,24 @@ import logoImg from "~/assets/images/logo.png";
   let mobileCloseBtn = document.querySelector(
     ".mobile_close_btn"
   ) as HTMLElement;
+  let headerElement = document.querySelector("header") as HTMLHeadElement;
 
   function toggleMobileNav(): void {
     bodyElement.classList.toggle("mobile-nav-active");
   }
+  function headerScrollListener(): void {
+    let yPosition = window.scrollY;
+
+    if (yPosition > 40) {
+      headerElement.classList.remove("bg-transparent");
+      headerElement.classList.add("bg-[var(--background-color)]");
+    } else {
+      headerElement.classList.add("g-transparent");
+      headerElement.classList.remove("bg-[var(--background-color)]");
+    }
+  }
+
+  window.addEventListener("scroll", () => headerScrollListener());
 
   if (bodyElement && mobileOpenBtn) {
     mobileOpenBtn.addEventListener("click", () => toggleMobileNav());

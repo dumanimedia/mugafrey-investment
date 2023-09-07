@@ -1,0 +1,26 @@
+<button
+  class="scrollBtn fixed bg-[var(--dark-green-color)] hover:bg-[var(--light-green-color)] py-2.5 px-5 rounded-full bottom-5 right-5 invisible transition-all ease-in-out duration-200"
+  onclick="
+  window.scrollTo(0, 0)
+  "
+>
+  &DoubleUpArrow;
+</button>
+
+<script>
+  const scrollBtn = document.querySelector(".scrollBtn");
+
+  function btnScroll(): void {
+    let yPosition = window.scrollY;
+
+    if (yPosition > 40) {
+      scrollBtn?.classList.add("visible");
+      scrollBtn?.classList.remove("invisible");
+    } else {
+      scrollBtn?.classList.add("invisible");
+      scrollBtn?.classList.add("visible");
+    }
+  }
+
+  window.addEventListener("scroll", () => btnScroll());
+</script>

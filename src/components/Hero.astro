@@ -1,0 +1,112 @@
+---
+import { getImage } from "astro:assets";
+import bannerImg1 from "~/assets/images/banner1.jpg";
+import bannerImg2 from "~/assets/images/banner2.jpg";
+import bannerImg3 from "~/assets/images/banner3.jpg";
+
+const optimizedImg1 = await getImage({ src: bannerImg1 });
+const optimizedImg2 = await getImage({ src: bannerImg2 });
+const optimizedImg3 = await getImage({ src: bannerImg3 });
+---
+
+<section
+  style={`background: linear-gradient(rgba(14, 20, 40, 0.6), rgba(14, 20, 40, 0.2)), url(${optimizedImg1.src}) center center;`}
+  class="bg-no-repeat bg-center py-[110px] md:py-[150px] min-h-screen flex items-center justify-center"
+  id="hero"
+>
+  <div class="wrapper">
+    <div class="slide">
+      <h6>we are ready to help you</h6>
+      <h4>Financial Analysis<br />&amp; Consulting</h4>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut hic iusto
+        cumque possimus culpa tempora recusandae labore, perspiciatis voluptate
+        modi dolorum voluptatibus consequuntur sit. Veniam porro sapiente magnam
+        quidem animi.
+      </p>
+      <a
+        class="inline-block outline-none uppercase font-bold px-6 py-3 transition-colors duration-300 rounded-full bg-[var(--dark-green-color)] hover:bg-[var(--light-green-color)] focus:bg-[var(--light-green-color)] !text-[var(--tartiary-color)]"
+        href="/contact"
+        class="filled-button">contact us</a
+      >
+    </div>
+  </div>
+</section><!-- <section
+  style={`background: linear-gradient(rgba(14, 20, 40, 0.6), rgba(14, 20, 40, 0.2)), url(${optimizedImg2.src}) center center;`}
+  class="object-cover bg-no-repeat bg-center py-[110px] md:py-[150px] min-h-screen flex items-center justify-center"
+>
+  <div class="wrapper">
+    <div class="slide">
+      <h6>we are here to support you</h6>
+      <h4>Accounting<br />&amp; Management</h4>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut hic iusto
+        cumque possimus culpa tempora recusandae labore, perspiciatis voluptate
+        modi dolorum voluptatibus consequuntur sit. Veniam porro sapiente magnam
+        quidem animi.
+      </p>
+      <a
+        class="inline-block outline-none uppercase font-bold px-6 py-3 transition-colors duration-300 rounded-full bg-[var(--dark-green-color)] hover:bg-[var(--light-green-color)] focus:bg-[var(--light-green-color)] !text-[var(--tartiary-color)]"
+        href="/services"
+        class="filled-button">Our Services</a
+      >
+    </div>
+  </div>
+</section> --><!-- <section
+  style={`background: linear-gradient(rgba(14, 20, 40, 0.6), rgba(14, 20, 40, 0.2)), url(${optimizedImg3.src}) center center;`}
+  class="object-cover bg-no-repeat bg-center py-[110px] md:py-[150px] min-h-screen flex items-center justify-center"
+>
+  <div class="wrapper">
+    <div class="slide">
+      <h6>we are ready to help you</h6>
+      <h4>Financial Analysis<br />&amp; Consulting</h4>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut hic iusto
+        cumque possimus culpa tempora recusandae labore, perspiciatis voluptate
+        modi dolorum voluptatibus consequuntur sit. Veniam porro sapiente magnam
+        quidem animi.
+      </p>
+      <a
+        class="inline-block outline-none uppercase font-bold px-6 py-3 transition-colors duration-300 rounded-full bg-[var(--dark-green-color)] hover:bg-[var(--light-green-color)] focus:bg-[var(--light-green-color)] !text-[var(--tartiary-color)]"
+        href="/contact"
+        class="filled-button">contact us</a
+      >
+    </div>
+  </div>
+</section> -->
+<style>
+  h6 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--light-green-color);
+    animation: fadeOutRight 1s both;
+  }
+  h4 {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    overflow: hidden;
+    animation: fadeOutLeft 1s both;
+  }
+  p {
+    max-width: 570px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 768px) {
+    h4 {
+      margin-bottom: 25px;
+      font-size: 28px;
+      line-height: 36px;
+      letter-spacing: 1px;
+    }
+  }
+</style>

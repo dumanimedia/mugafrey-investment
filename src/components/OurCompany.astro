@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import aboutHome from "~/assets/images/about-home.jpg";
+---
+
+<section>
+  <div class="wrapper mt-10 py-10 flex flex-col md:flex-row">
+    <div class="w-full md:w-1/2 img flex items-center justify-center">
+      <Image src={aboutHome} alt={"About Image"} class="w-full max-w-lg" />
+    </div>
+    <div class="w-full md:w-1/2 content p-3 sm:p-6 md:p-12">
+      <span class="uppercase block text-sm mb-2.5">Who we are</span>
+      <div class="section-header">
+        <span>Get to know about <em>our company</em></span>
+        <h2>Get to know about <em>our company</em></h2>
+      </div>
+      <p class="mb-6">
+        Curabitur pulvinar sem a leo tempus facilisis. Sed non sagittis neque.
+        Nulla conse quat tellus nibh, id molestie felis sagittis ut. Nam
+        ullamcorper tempus ipsum in cursus<br /><br />Praes end at dictum metus.
+        Morbi id hendrerit lectus, nec dapibus ex. Etiam ipsum quam, luctus eu
+        egestas eget, tincidunt
+      </p>
+      <a
+        href="/about"
+        class="inline-block outline-none uppercase font-bold px-6 py-3 transition-colors duration-300 rounded-full bg-[var(--dark-green-color)] hover:bg-[var(--light-green-color)] focus:bg-[var(--light-green-color)] !text-[var(--tartiary-color)]"
+      >
+        Read More
+      </a>
+    </div>
+  </div>
+</section>

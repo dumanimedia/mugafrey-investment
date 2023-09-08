@@ -3,19 +3,20 @@ interface Props {
   title: string;
 }
 const { title } = Astro.props;
-import "../styles/global.css";
-import Header from "./Header.astro";
-import Footer from "./Footer.astro";
+import '../styles/global.css';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import ScrollBtn from './ScrollBtn.astro';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-    <meta name="generator" content={Astro.generator} />
+    <meta charset='UTF-8' />
+    <meta name='description' content='Astro description' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='shortcut icon' href='favicon.png' type='image/x-icon' />
+    <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
   </head>
 
@@ -25,6 +26,7 @@ import Footer from "./Footer.astro";
       <slot />
     </main>
     <Footer />
-    <script is:inline src="./node_modules/preline/dist/preline.js"></script>
+    <ScrollBtn />
+    <script is:inline src='./node_modules/preline/dist/preline.js'></script>
   </body>
 </html>

@@ -1,9 +1,105 @@
 ---
-import Layout from "~/components/Layout.astro";
+import Layout from '~/components/Layout.astro';
+import Breadcrumb from '~/components/Breadcrumb.astro';
+import quoteBg from '~/assets/images/quote-bg.jpg';
+import { getImage } from 'astro:assets';
+const optmisedImg = await getImage({ src: quoteBg });
 ---
 
-<Layout title="Get A Quote - Mugafrey Investment">
-  <section class="pt-24">
-    <div class="wrapper">Get A Quote</div>
+<Layout title='Get A Quote - Mugafrey Investment'>
+  <section>
+    <Breadcrumb title='Get A Quote' info='Hello World' />
+    <div class='wrapper py-20 flex justify-center flex-col lg:flex-row'>
+      <div
+        class='img h-[500px] lg:h-auto lg:min-h-[500px] w-full lg:w-[40%] bg-cover bg-center'
+        style={`background-image: url(${optmisedImg.src});`}
+      >
+      </div>
+      <form class='content w-full lg:w-[60%] px-0 py-5 sm:p-5 lg:px-10 lg:py-0'>
+        <div class='section-header !py-0'>
+          <span>Get a quote</span>
+          <h2>Get a quote</h2>
+          <p>
+            Vel nobis odio laboriosam et hic voluptatem. Inventore vitae totam.
+            Rerum repellendus enim linead sero park flows.
+          </p>
+        </div>
+        <div
+          class='relative flex items-center justify-between flex-wrap gap-x-3'
+        >
+          <div class='mt-6 w-full md:w-[calc(50%-12px)]'>
+            <input
+              type='text'
+              name='departure'
+              placeholder='City of Departure'
+              required
+            />
+          </div>
+          <div class='mt-6 w-full md:w-[calc(50%-12px)]'>
+            <input
+              type='text'
+              name='delivery'
+              placeholder='Delivery City'
+              required
+            />
+          </div>
+          <div class='mt-6 w-full md:w-[calc(50%-12px)]'>
+            <input
+              type='text'
+              name='weight'
+              placeholder='Total Weight (kg)'
+              required
+            />
+          </div>
+          <div class='mt-6 w-full md:w-[calc(50%-12px)]'>
+            <input
+              type='text'
+              name='dimensions'
+              placeholder='Dimensions (cm)'
+              required
+            />
+          </div>
+
+          <div class='personal mt-6 w-full'>
+            <div class='section-header !py-0'>
+              <span>Your Personal Details</span>
+              <h2>Your Personal Details</h2>
+            </div>
+          </div>
+          <div class='mt-6 w-full'>
+            <input type='text' name='name' placeholder='Name' required />
+          </div>
+          <div class='mt-6 w-full'>
+            <input type='email' name='email' placeholder='Email' required />
+          </div>
+          <div class='mt-6 w-full'>
+            <input type='text' name='phone' placeholder='Phone' required />
+          </div>
+          <div class='mt-6 w-full'>
+            <textarea name='message' rows='6' placeholder='Message' required
+            ></textarea>
+          </div>
+          <div class='mt-6 w-full text-center'>
+            <!-- <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your quote request has been sent successfully. Thank you!</div> -->
+
+            <button
+              class='bg-[var(--dark-green-color)] !text-[var(--tartiary-color)] hover:!text-[var(--tartiary-color)] hover:bg-[var(--light-green-color)] px-3 py-2.5 rounded-[4px] capitalize'
+              type='submit'>Get a quote</button
+            >
+          </div>
+        </div>
+      </form>
+    </div>
   </section>
 </Layout>
+
+<style>
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px 12px;
+    color: var(--background-color);
+  }
+</style>

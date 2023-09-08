@@ -134,7 +134,7 @@ img {
     @apply whitespace-nowrap relative;
   }
   body header nav ul li a {
-    @apply pt-1.5 mx-[14px];
+    @apply pt-1.5 mx-[14px] !text-white;
   }
 }
 @media (width < 1024px) {

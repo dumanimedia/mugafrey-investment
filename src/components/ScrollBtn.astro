@@ -1,26 +1,31 @@
+---
+import { Image } from 'astro:assets';
+import arrowUp from '~/assets/images/icons/arrow-up.svg';
+---
+
 <button
-  class="scrollBtn fixed bg-[var(--dark-green-color)] hover:bg-[var(--light-green-color)] py-2.5 px-5 rounded-full bottom-5 right-5 invisible transition-all ease-in-out duration-200"
-  onclick="
+  class='scrollBtn fixed bg-[var(--dark-green-color)] hover:bg-[var(--light-green-color)] border-none rounded-full bottom-5 right-5 invisible transition-all ease-in-out duration-200 flex items-center justify-center p-1.5'
+  onclick='
   window.scrollTo(0, 0)
-  "
+  '
 >
-  &DoubleUpArrow;
+  <Image src={arrowUp} alt={'Arrow Up'} class='w-7' />
 </button>
 
 <script>
-  const scrollBtn = document.querySelector(".scrollBtn");
+  const scrollBtn = document.querySelector('.scrollBtn');
 
   function btnScroll(): void {
     let yPosition = window.scrollY;
 
     if (yPosition > 40) {
-      scrollBtn?.classList.add("visible");
-      scrollBtn?.classList.remove("invisible");
+      scrollBtn?.classList.add('visible');
+      scrollBtn?.classList.remove('invisible');
     } else {
-      scrollBtn?.classList.add("invisible");
-      scrollBtn?.classList.add("visible");
+      scrollBtn?.classList.add('invisible');
+      scrollBtn?.classList.add('visible');
     }
   }
 
-  window.addEventListener("scroll", () => btnScroll());
+  window.addEventListener('scroll', () => btnScroll());
 </script>

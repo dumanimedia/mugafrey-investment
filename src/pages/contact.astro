@@ -1,10 +1,6 @@
 ---
 import Breadcrumb from '~/components/Breadcrumb.astro';
-import Layout from '~/components/Layout.astro';
-import { Image } from 'astro:assets';
-import phoneIcon from '~/assets/images/icons/phone.svg';
-import mailIcon from '~/assets/images/icons/mail.svg';
-import locationIcon from '~/assets/images/icons/location.svg';
+import Layout from '~/layouts/Layout.astro';
 ---
 
 <Layout title='Contact - Mugafrey Investment'>
@@ -16,11 +12,7 @@ import locationIcon from '~/assets/images/icons/location.svg';
           <div
             class='py-[60px] px-[30px] flex items-center justify-center flex-col bg-[rgb(23,23,23)] rounded-2xl'
           >
-            <Image
-              class='aspect-square w-14'
-              src={phoneIcon}
-              alt='phone icon'
-            />
+            <i class='text-[56px] bi-phone-fill'></i>
             <h4 class='text-2xl mb-4 mt-8 font-bold'>Phone</h4>
             <p>
               Vivamus ut tellus mi. Nulla nec cursus elit, id vulputate nec
@@ -46,7 +38,7 @@ import locationIcon from '~/assets/images/icons/location.svg';
           <div
             class='py-[60px] px-[30px] flex items-center justify-center flex-col bg-[rgb(23,23,23)] rounded-2xl'
           >
-            <Image class='aspect-square w-14' src={mailIcon} alt='mail icon' />
+            <i class='text-[56px] bi-mailbox2'></i>
             <h4 class='text-2xl mb-4 mt-8 font-bold'>Email</h4>
             <p>
               Vivamus ut tellus mi. Nulla nec cursus elit, id vulputate nec
@@ -65,11 +57,7 @@ import locationIcon from '~/assets/images/icons/location.svg';
           <div
             class='py-[60px] px-[30px] flex items-center justify-center flex-col bg-[rgb(23,23,23)] rounded-2xl'
           >
-            <Image
-              class='aspect-square w-14'
-              src={locationIcon}
-              alt='location icon'
-            />
+            <i class='text-[56px] bi-pin-map-fill'></i>
             <h4 class='text-2xl mb-4 mt-8 font-bold'>Location</h4>
             <p>
               P.O. Box 700651 <br />

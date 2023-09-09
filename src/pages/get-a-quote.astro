@@ -1,5 +1,5 @@
 ---
-import Layout from '~/components/Layout.astro';
+import Layout from '~/layouts/Layout.astro';
 import Breadcrumb from '~/components/Breadcrumb.astro';
 import quoteBg from '~/assets/images/quote-bg.jpg';
 import { getImage } from 'astro:assets';
@@ -8,7 +8,7 @@ const optmisedImg = await getImage({ src: quoteBg });
 
 <Layout title='Get A Quote - Mugafrey Investment'>
   <section>
-    <Breadcrumb title='Get A Quote' info='Hello World' />
+    <Breadcrumb title='Get A Quote' info='Get A quoatation for your goods!' />
     <div class='wrapper py-20 flex justify-center flex-col lg:flex-row'>
       <div
         class='img h-[500px] lg:h-auto lg:min-h-[500px] w-full lg:w-[40%] bg-cover bg-center'

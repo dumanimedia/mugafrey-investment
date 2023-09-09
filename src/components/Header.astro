@@ -1,8 +1,6 @@
 ---
 import { Image } from 'astro:assets';
 import logoImg from '~/assets/images/logo.png';
-import clockIcon from '~/assets/images/icons/clock.svg';
-import phoneIcon from '~/assets/images/icons/phone.svg';
 ---
 
 <header
@@ -10,14 +8,14 @@ import phoneIcon from '~/assets/images/icons/phone.svg';
 >
   <div class='wrapper my-3 text-sm flex justify-between items-center relative'>
     <div class='flex items-center gap-4'>
-      <span class='flex mr-2'
-        ><Image class='mr-2' src={clockIcon} alt='phone icon' />
-        <span>Mon-Fri 09:00-17:00</span></span
-      >
-      <a class='hidden md:flex' href='tel:+256 772 037464'
-        ><Image class='mr-2' src={phoneIcon} alt='phone icon' />
-        <span>+256 772 037464</span></a
-      >
+      <span class='flex mr-2'>
+        <i class='bi-clock-fill mr-2'></i>
+        <span>Mon-Fri 09:00-17:00</span>
+      </span>
+      <a class='hidden md:flex' href='tel:+256 772 037464'>
+        <i class='bi-phone-fill text-[var(--tartiary-color)] mr-2'></i>
+        <span>+256 772 037464</span>
+      </a>
     </div>
     <div class='social-links flex'>
       <a
@@ -26,7 +24,7 @@ import phoneIcon from '~/assets/images/icons/phone.svg';
         class='border-none p-0 !w-4 !h-0'
         rel='noopener noreferrer'
       >
-        <i>fb</i>
+        <i class='bi-facebook'></i>
       </a>
       <a
         href='https://www.twitter.com/mugafreyinvestment/'
@@ -34,7 +32,7 @@ import phoneIcon from '~/assets/images/icons/phone.svg';
         rel='noopener noreferrer'
         class='border-none p-0 !w-4 !h-0'
       >
-        <i>tw</i>
+        <i class='bi-twitter'></i>
       </a>
       <a
         href='https://www.instagram.com/mugafreyinvestment/'
@@ -42,7 +40,7 @@ import phoneIcon from '~/assets/images/icons/phone.svg';
         rel='noopener noreferrer'
         class='border-none p-0 !w-4 !h-0'
       >
-        <i>ig</i>
+        <i class='bi-instagram'></i>
       </a>
       <a
         href='https://www.linkedin.com/mugafreyinvestment/'
@@ -50,7 +48,7 @@ import phoneIcon from '~/assets/images/icons/phone.svg';
         rel='noopener noreferrer'
         class='border-none p-0 !w-4 !h-0'
       >
-        <i>li</i>
+        <i class='bi-linkedin'></i>
       </a>
     </div>
   </div>
@@ -149,10 +147,7 @@ import phoneIcon from '~/assets/images/icons/phone.svg';
     }
   }
 
-  window.addEventListener('scroll', () => headerScrollListener());
-
-  if (bodyElement && mobileOpenBtn) {
-    mobileOpenBtn.addEventListener('click', () => toggleMobileNav());
-    mobileCloseBtn.addEventListener('click', () => toggleMobileNav());
-  }
+  window.addEventListener('scroll', headerScrollListener);
+  mobileOpenBtn.addEventListener('click', toggleMobileNav);
+  mobileCloseBtn.addEventListener('click', toggleMobileNav);
 </script>

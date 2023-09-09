@@ -1,7 +1,7 @@
 ---
 interface Props {
   title: string;
-  info?: string;
+  info: string;
 }
 const { title, info } = Astro.props;
 import { getImage } from 'astro:assets';
@@ -16,12 +16,9 @@ const optimizedImg = await getImage({ src: breadCrumbImg });
   >
     <div class='wrapper'>
       <div class='flex items-center justify-center flex-col'>
-        <h2 class='font-semibold text-[56px]'>{title}</h2>
+        <h2 class='font-semibold text-[56px] text-center'>{title}</h2>
         <p class='max-w-3xl text-center'>
-          {
-            info ??
-              'Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo      odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.'
-          }
+          {info}
         </p>
       </div>
     </div>

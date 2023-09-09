@@ -9,72 +9,91 @@ const optimizedImg2 = await getImage({ src: bannerImg2 });
 const optimizedImg3 = await getImage({ src: bannerImg3 });
 ---
 
-<section
-  style={`background: linear-gradient(rgba(14, 20, 40, 0.6), rgba(14, 20, 40, 0.2)), url(${optimizedImg1.src}) center center;`}
-  class="bg-no-repeat bg-center py-[110px] md:py-[150px] min-h-screen flex items-center justify-center"
-  id="hero"
->
-  <div class="wrapper">
-    <div class="slide">
-      <h6>we are ready to help you</h6>
-      <h4>Financial Analysis<br />&amp; Consulting</h4>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut hic iusto
-        cumque possimus culpa tempora recusandae labore, perspiciatis voluptate
-        modi dolorum voluptatibus consequuntur sit. Veniam porro sapiente magnam
-        quidem animi.
-      </p>
-      <a
-        class="inline-block outline-none uppercase font-bold px-6 py-3 transition-colors duration-300 rounded-full bg-[var(--dark-green-color)] hover:bg-[var(--light-green-color)] focus:bg-[var(--light-green-color)] !text-[var(--tartiary-color)]"
-        href="/contact"
-        class="filled-button">contact us</a
-      >
+<section class="slideContainer transition !duration-1000">
+  <div
+    style={`background: linear-gradient(rgba(14, 20, 40, 0.6), rgba(14, 20, 40, 0.2)), url(${optimizedImg1.src}) center center;`}
+    class="slideItem bg-no-repeat bg-center py-[110px] md:py-[150px] min-h-screen flex items-center justify-center"
+    id="hero"
+  >
+    <div class="wrapper">
+      <div class="slide">
+        <h6>we are ready to help you</h6>
+        <h4>Financial Analysis<br />&amp; Consulting</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut hic iusto
+          cumque possimus culpa tempora recusandae labore, perspiciatis
+          voluptate modi dolorum voluptatibus consequuntur sit. Veniam porro
+          sapiente magnam quidem animi.
+        </p>
+        <a
+          class="inline-block outline-none uppercase font-bold px-6 py-3 transition-colors duration-300 rounded-full bg-[var(--dark-green-color)] hover:bg-[var(--light-green-color)] focus:bg-[var(--light-green-color)] !text-[var(--tartiary-color)]"
+          href="/contact"
+          class="filled-button">contact us</a
+        >
+      </div>
     </div>
   </div>
-</section><!-- <section
-  style={`background: linear-gradient(rgba(14, 20, 40, 0.6), rgba(14, 20, 40, 0.2)), url(${optimizedImg2.src}) center center;`}
-  class="object-cover bg-no-repeat bg-center py-[110px] md:py-[150px] min-h-screen flex items-center justify-center"
->
-  <div class="wrapper">
-    <div class="slide">
-      <h6>we are here to support you</h6>
-      <h4>Accounting<br />&amp; Management</h4>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut hic iusto
-        cumque possimus culpa tempora recusandae labore, perspiciatis voluptate
-        modi dolorum voluptatibus consequuntur sit. Veniam porro sapiente magnam
-        quidem animi.
-      </p>
-      <a
-        class="inline-block outline-none uppercase font-bold px-6 py-3 transition-colors duration-300 rounded-full bg-[var(--dark-green-color)] hover:bg-[var(--light-green-color)] focus:bg-[var(--light-green-color)] !text-[var(--tartiary-color)]"
-        href="/services"
-        class="filled-button">Our Services</a
-      >
+  <div
+    style={`background: linear-gradient(rgba(14, 20, 40, 0.6), rgba(14, 20, 40, 0.2)), url(${optimizedImg2.src}) center center;`}
+    class="slideItem object-cover bg-no-repeat bg-center py-[110px] md:py-[150px] min-h-screen flex items-center justify-center"
+  >
+    <div class="wrapper">
+      <div class="slide">
+        <h6>we are here to support you</h6>
+        <h4>Accounting<br />&amp; Management</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut hic iusto
+          cumque possimus culpa tempora recusandae labore, perspiciatis
+          voluptate modi dolorum voluptatibus consequuntur sit. Veniam porro
+          sapiente magnam quidem animi.
+        </p>
+        <a
+          class="inline-block outline-none uppercase font-bold px-6 py-3 transition-colors duration-300 rounded-full bg-[var(--dark-green-color)] hover:bg-[var(--light-green-color)] focus:bg-[var(--light-green-color)] !text-[var(--tartiary-color)]"
+          href="/#services"
+          class="filled-button">Our Services</a
+        >
+      </div>
     </div>
   </div>
-</section> --><!-- <section
-  style={`background: linear-gradient(rgba(14, 20, 40, 0.6), rgba(14, 20, 40, 0.2)), url(${optimizedImg3.src}) center center;`}
-  class="object-cover bg-no-repeat bg-center py-[110px] md:py-[150px] min-h-screen flex items-center justify-center"
->
-  <div class="wrapper">
-    <div class="slide">
-      <h6>we are ready to help you</h6>
-      <h4>Financial Analysis<br />&amp; Consulting</h4>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut hic iusto
-        cumque possimus culpa tempora recusandae labore, perspiciatis voluptate
-        modi dolorum voluptatibus consequuntur sit. Veniam porro sapiente magnam
-        quidem animi.
-      </p>
-      <a
-        class="inline-block outline-none uppercase font-bold px-6 py-3 transition-colors duration-300 rounded-full bg-[var(--dark-green-color)] hover:bg-[var(--light-green-color)] focus:bg-[var(--light-green-color)] !text-[var(--tartiary-color)]"
-        href="/contact"
-        class="filled-button">contact us</a
-      >
+  <div
+    style={`background: linear-gradient(rgba(14, 20, 40, 0.6), rgba(14, 20, 40, 0.2)), url(${optimizedImg3.src}) center center;`}
+    class="slideItem object-cover bg-no-repeat bg-center py-[110px] md:py-[150px] min-h-screen flex items-center justify-center"
+  >
+    <div class="wrapper">
+      <div class="slide">
+        <h6>we are ready to help you</h6>
+        <h4>Financial Analysis<br />&amp; Consulting</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut hic iusto
+          cumque possimus culpa tempora recusandae labore, perspiciatis
+          voluptate modi dolorum voluptatibus consequuntur sit. Veniam porro
+          sapiente magnam quidem animi.
+        </p>
+        <a
+          class="inline-block outline-none uppercase font-bold px-6 py-3 transition-colors duration-300 rounded-full bg-[var(--dark-green-color)] hover:bg-[var(--light-green-color)] focus:bg-[var(--light-green-color)] !text-[var(--tartiary-color)]"
+          href="/contact"
+          class="filled-button">contact us</a
+        >
+      </div>
     </div>
   </div>
-</section> -->
+</section>
+
 <style>
+  section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    position: relative;
+  }
+  section::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .slideItem {
+    flex: 1 0 100%;
+  }
   h6 {
     margin-bottom: 15px;
     font-size: 22px;
@@ -110,3 +129,37 @@ const optimizedImg3 = await getImage({ src: bannerImg3 });
     }
   }
 </style>
+
+<script>
+  const slideContainerEl = document.querySelector(
+    ".slideContainer"
+  ) as HTMLElement;
+  const slideItems = document.querySelectorAll(
+    ".slideItem"
+  ) as NodeListOf<HTMLDivElement>;
+
+  // function scrollToPreviousSlide() {
+  //   const slideItemWidth = slideItems[0].clientWidth;
+  //   if (slideContainerEl.scrollLeft === 0) {
+  //     slideContainerEl.scrollLeft = slideItemWidth * (slideItems.length - 1);
+  //     return;
+  //   }
+  //   slideContainerEl.scrollLeft -= slideItemWidth;
+  // }
+
+  function scrollToNextSlide() {
+    const slideItemWidth = slideItems[0].clientWidth;
+    if (
+      slideContainerEl.scrollLeft ===
+      slideItemWidth * (slideItems.length - 1)
+    ) {
+      slideContainerEl.scrollLeft = 0;
+      return;
+    }
+    slideContainerEl.scrollLeft += slideItemWidth;
+  }
+
+  document.addEventListener("DOMContentLoaded", () =>
+    setInterval(() => scrollToNextSlide(), 5000)
+  );
+</script>

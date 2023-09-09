@@ -1,11 +1,17 @@
 ---
+import Layout from '~/layouts/Layout.astro';
 import Breadcrumb from '~/components/Breadcrumb.astro';
-import Layout from '~/components/Layout.astro';
+import Faqs from '~/components/Faqs.astro';
+import Team from '~/components/Team.astro';
+import Testimonials from '~/components/Testimonials.astro';
 ---
 
 <Layout title='About - Mugafrey Investment'>
   <section>
-    <Breadcrumb title='About' />
+    <Breadcrumb title='About' , info='Get to know about Mugafrey Investment.' />
     <div class='wrapper py-20'>About Mugafrey Investment</div>
+    <Team />
+    <Testimonials />
+    <Faqs />
   </section>
 </Layout>

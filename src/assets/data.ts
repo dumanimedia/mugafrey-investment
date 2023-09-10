@@ -43,7 +43,7 @@ export const servicesInfo: Service[] = [
     ],
   },
   {
-    name: 'money-lending',
+    name: 'money_lending',
     subtitle:
       'Do we offer personal loans, business loans, or both? What are the terms of the loans.',
     description:

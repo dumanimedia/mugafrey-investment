@@ -43,6 +43,25 @@ export const servicesInfo: Service[] = [
     ],
   },
   {
+    name: 'money-lending',
+    subtitle:
+      'Do we offer personal loans, business loans, or both? What are the terms of the loans.',
+    description:
+      "What to keep in mind; The types of loans offered. What types of loans does the money lending service offer? What are the terms of the loans, such as the interest rate, repayment period, and fees? What are the borrower's qualifications for getting a loan from the money lending service? Do they have good credit? What is their income and debt-to-income ratio? This we can enlighten you with;",
+    image: packagingService,
+    offers: [
+      'What are the hidden fees?',
+      'Is there a prepayment penalty?',
+      'What are the terms of the repayment schedule?',
+      'Is there a grace period?',
+      'What are the options for borrowers who are unable to make a payment?',
+      "What is the company's policy on late payments and on collections",
+    ],
+    otherInfo: [
+      'It is important to do know and compare different money lending services before you choose one. We will help you find the best loan for your needs and budget.',
+    ],
+  },
+  {
     name: 'storage',
     subtitle:
       'How much data do you need to store? How often do you need to access the data? How important is security?',
@@ -69,22 +88,6 @@ export const servicesInfo: Service[] = [
       'Cargo services help businesses to save time and money by transporting large quantities of goods in bulk.',
       'Cargo services help businesses to reach a wider range of customers by shipping goods to different parts of the world.',
       'Cargo services help businesses to reduce their carbon footprint by transporting goods in a more efficient way.',
-    ],
-  },
-  {
-    name: 'packaging',
-    subtitle:
-      'Temporibus et in vero dicta aut eius lidero plastis trand lined voluptas dolorem ut voluptas',
-    description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias deleniti aperiam qui, magni iste sapiente culpa totam quia corrupti modi incidunt voluptate, non temporibus impedit repudiandae repellendus, sequi repellat quisquam. Harum, quam? Rem libero labore asperiores? Mollitia consectetur delectus ad consequuntur, iusto labore. Officiis dolores eligendi in cupiditate architecto sit.',
-    image: packagingService,
-    offers: [
-      'Aut eum totam accusantium voluptatem.',
-      'Assumenda et porro nisi nihil nesciunt voluptatibus.',
-    ],
-    otherInfo: [
-      'Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.',
-      'Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.',
     ],
   },
   {

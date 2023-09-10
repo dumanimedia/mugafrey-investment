@@ -1,6 +1,6 @@
 import logisticsService from '~/assets/images/services/logistics.jpg';
 import cargoService from '~/assets/images/services/cargo.jpg';
-import packagingService from '~/assets/images/services/packaging.jpg';
+import moneyLendingService from '~/assets/images/services/money_lending.jpg';
 import storageService from '~/assets/images/services/storage.jpg';
 import truckingService from '~/assets/images/services/trucking.jpg';
 import warehousingService from '~/assets/images/services/warehousing.jpg';
@@ -48,7 +48,7 @@ export const servicesInfo: Service[] = [
       'Do we offer personal loans, business loans, or both? What are the terms of the loans.',
     description:
       "What to keep in mind; The types of loans offered. What types of loans does the money lending service offer? What are the terms of the loans, such as the interest rate, repayment period, and fees? What are the borrower's qualifications for getting a loan from the money lending service? Do they have good credit? What is their income and debt-to-income ratio? This we can enlighten you with;",
-    image: packagingService,
+    image: moneyLendingService,
     offers: [
       'What are the hidden fees?',
       'Is there a prepayment penalty?',

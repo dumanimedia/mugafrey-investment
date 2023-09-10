@@ -1,78 +1,75 @@
 ---
-import { getImage } from "astro:assets";
-import bannerImg1 from "~/assets/images/banner1.jpg";
-import bannerImg2 from "~/assets/images/banner2.jpg";
-import bannerImg3 from "~/assets/images/banner3.jpg";
+import { getImage } from 'astro:assets';
+import bannerImg1 from '~/assets/images/banners/banner3.jpg';
+import bannerImg2 from '~/assets/images/banners/banner2.jpg';
+import bannerImg3 from '~/assets/images/banners/banner4.jpg';
 
 const optimizedImg1 = await getImage({ src: bannerImg1 });
 const optimizedImg2 = await getImage({ src: bannerImg2 });
 const optimizedImg3 = await getImage({ src: bannerImg3 });
 ---
 
-<section class="slideContainer transition !duration-1000">
+<section class='slideContainer transition !duration-1000'>
   <div
     style={`background: linear-gradient(rgba(14, 20, 40, 0.6), rgba(14, 20, 40, 0.2)), url(${optimizedImg1.src}) center center;`}
-    class="slideItem bg-no-repeat bg-center py-[110px] md:py-[150px] min-h-screen flex items-center justify-center"
-    id="hero"
+    class='slideItem bg-no-repeat bg-center py-[110px] md:py-[150px] min-h-screen flex items-center justify-center'
+    id='hero'
   >
-    <div class="wrapper">
-      <div class="slide">
+    <div class='wrapper'>
+      <div class='slide'>
         <h6>we are ready to help you</h6>
         <h4>Financial Analysis<br />&amp; Consulting</h4>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut hic iusto
-          cumque possimus culpa tempora recusandae labore, perspiciatis
-          voluptate modi dolorum voluptatibus consequuntur sit. Veniam porro
-          sapiente magnam quidem animi.
+          We are a leading provider of logistics and money lending services. We
+          help businesses of all sizes move their goods and get the financing
+          they need to grow.
         </p>
         <a
-          class="inline-block outline-none uppercase font-bold px-6 py-3 transition-colors duration-300 rounded-full bg-[var(--dark-green-color)] hover:bg-[var(--light-green-color)] focus:bg-[var(--light-green-color)] !text-[var(--tartiary-color)]"
-          href="/contact"
-          class="filled-button">contact us</a
+          class='inline-block outline-none uppercase font-bold px-6 py-3 transition-colors duration-300 rounded-full hover:bg-[var(--dark-green-color)] bg-[var(--light-green-color)] focus:bg-[var(--dark-green-color)] !text-[var(--tartiary-color)]'
+          href='/contact'
+          class='filled-button'>contact us</a
         >
       </div>
     </div>
   </div>
   <div
-    style={`background: linear-gradient(rgba(14, 20, 40, 0.6), rgba(14, 20, 40, 0.2)), url(${optimizedImg2.src}) center center;`}
-    class="slideItem object-cover bg-no-repeat bg-center py-[110px] md:py-[150px] min-h-screen flex items-center justify-center"
+    style={`background: linear-gradient(rgba(14, 20, 40, 0.8), rgba(14, 20, 40, 0.5)), url(${optimizedImg2.src}) center center;`}
+    class='slideItem object-cover bg-no-repeat bg-center py-[110px] md:py-[150px] min-h-screen flex items-center justify-center'
   >
-    <div class="wrapper">
-      <div class="slide">
+    <div class='wrapper'>
+      <div class='slide'>
         <h6>we are here to support you</h6>
         <h4>Accounting<br />&amp; Management</h4>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut hic iusto
-          cumque possimus culpa tempora recusandae labore, perspiciatis
-          voluptate modi dolorum voluptatibus consequuntur sit. Veniam porro
-          sapiente magnam quidem animi.
+          Our team of experts has over 20 years of experience in the logistics
+          and finance industries. We are committed to providing our customers
+          with excellent service and competitive rates
         </p>
         <a
-          class="inline-block outline-none uppercase font-bold px-6 py-3 transition-colors duration-300 rounded-full bg-[var(--dark-green-color)] hover:bg-[var(--light-green-color)] focus:bg-[var(--light-green-color)] !text-[var(--tartiary-color)]"
-          href="/#services"
-          class="filled-button">Our Services</a
+          class='inline-block outline-none uppercase font-bold px-6 py-3 transition-colors duration-300 rounded-full hover:bg-[var(--dark-green-color)] bg-[var(--light-green-color)] focus:bg-[var(--dark-green-color)] !text-[var(--tartiary-color)]'
+          href='/#services'
+          class='filled-button'>Our Services</a
         >
       </div>
     </div>
   </div>
   <div
     style={`background: linear-gradient(rgba(14, 20, 40, 0.6), rgba(14, 20, 40, 0.2)), url(${optimizedImg3.src}) center center;`}
-    class="slideItem object-cover bg-no-repeat bg-center py-[110px] md:py-[150px] min-h-screen flex items-center justify-center"
+    class='slideItem object-cover bg-no-repeat bg-center py-[110px] md:py-[150px] min-h-screen flex items-center justify-center'
   >
-    <div class="wrapper">
-      <div class="slide">
+    <div class='wrapper'>
+      <div class='slide'>
         <h6>we are ready to help you</h6>
         <h4>Financial Analysis<br />&amp; Consulting</h4>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut hic iusto
-          cumque possimus culpa tempora recusandae labore, perspiciatis
-          voluptate modi dolorum voluptatibus consequuntur sit. Veniam porro
-          sapiente magnam quidem animi.
+          We are a leading provider of logistics and money lending services. We
+          help businesses of all sizes move their goods and get the financing
+          they need to grow.
         </p>
         <a
-          class="inline-block outline-none uppercase font-bold px-6 py-3 transition-colors duration-300 rounded-full bg-[var(--dark-green-color)] hover:bg-[var(--light-green-color)] focus:bg-[var(--light-green-color)] !text-[var(--tartiary-color)]"
-          href="/contact"
-          class="filled-button">contact us</a
+          class='inline-block outline-none uppercase font-bold px-6 py-3 transition-colors duration-300 rounded-full hover:bg-[var(--dark-green-color)] bg-[var(--light-green-color)] focus:bg-[var(--dark-green-color)] !text-[var(--tartiary-color)]'
+          href='/contact'
+          class='filled-button'>contact us</a
         >
       </div>
     </div>
@@ -81,7 +78,7 @@ const optimizedImg3 = await getImage({ src: bannerImg3 });
 
 <style>
   section {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     overflow-x: scroll;
@@ -114,10 +111,11 @@ const optimizedImg3 = await getImage({ src: bannerImg3 });
   }
   p {
     max-width: 570px;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 30px;
     margin-bottom: 40px;
+    color: var(--tartiary-color);
   }
 
   @media (max-width: 768px) {
@@ -132,20 +130,11 @@ const optimizedImg3 = await getImage({ src: bannerImg3 });
 
 <script>
   const slideContainerEl = document.querySelector(
-    ".slideContainer"
+    '.slideContainer'
   ) as HTMLElement;
   const slideItems = document.querySelectorAll(
-    ".slideItem"
+    '.slideItem'
   ) as NodeListOf<HTMLDivElement>;
-
-  // function scrollToPreviousSlide() {
-  //   const slideItemWidth = slideItems[0].clientWidth;
-  //   if (slideContainerEl.scrollLeft === 0) {
-  //     slideContainerEl.scrollLeft = slideItemWidth * (slideItems.length - 1);
-  //     return;
-  //   }
-  //   slideContainerEl.scrollLeft -= slideItemWidth;
-  // }
 
   function scrollToNextSlide() {
     const slideItemWidth = slideItems[0].clientWidth;
@@ -159,7 +148,7 @@ const optimizedImg3 = await getImage({ src: bannerImg3 });
     slideContainerEl.scrollLeft += slideItemWidth;
   }
 
-  document.addEventListener("DOMContentLoaded", () =>
-    setInterval(() => scrollToNextSlide(), 5000)
+  document.addEventListener('DOMContentLoaded', () =>
+    setInterval(() => scrollToNextSlide(), 8000)
   );
 </script>

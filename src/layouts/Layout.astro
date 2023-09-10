@@ -1,4 +1,5 @@
 ---
+import { SEO } from 'astro-seo';
 interface Props {
   title: string;
 }
@@ -12,23 +13,55 @@ import ScrollBtn from '../components/ScrollBtn.astro';
 <!doctype html>
 <html lang='en'>
   <head>
+    <SEO
+      title={title}
+      description="We're the leading provider of logistics and financing solutions for businesses of all sizes. We'll work with you to find the right solution for your needs."
+      openGraph={{
+        basic: {
+          title: title,
+          type: 'website',
+          image: 'https://mugafreyinvestment.vercel.app/social.jpg',
+          url: 'https://mugafreyinvestment.vercel.app',
+        },
+      }}
+      twitter={{
+        creator: '@dumanimedia',
+        description:
+          "We're the leading provider of logistics and financing solutions for businesses of all sizes. We'll work with you to find the right solution for your needs.",
+        title: title,
+        image: 'https://mugafreyinvestment.vercel.app/social.jpg',
+        imageAlt: 'mugafrey investment',
+        card: 'summary_large_image',
+      }}
+      ,
+      extend={{
+        link: [
+          { rel: 'icon', href: '/favicon.png' },
+          {
+            rel: 'stylesheet',
+            href: '/bootstrap-icons/bootstrap-icons.min.css',
+          },
+          { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+          {
+            rel: 'preconnect',
+            href: 'https://fonts.gstatic.com',
+            crossorigin: '',
+          },
+          {
+            rel: 'stylesheet',
+            href: "https://fonts.googleapis.com/css2?family=ABeeZee&family=Space+Grotesk:wght@400;500;600;700&display=swap'",
+          },
+        ],
+        meta: [
+          {
+            name: 'viewport',
+            content: 'width=device-width, initial-scale=1.0',
+          },
+        ],
+      }}
+    />
     <meta charset='UTF-8' />
-    <meta name='description' content='Astro description' />
-    <meta name='viewport' content='width=device-width' />
-    <link rel='shortcut icon' href='favicon.png' type='image/x-icon' />
-    <link rel='stylesheet' href='/bootstrap-icons/bootstrap-icons.min.css' />
     <meta name='generator' content={Astro.generator} />
-    <title>{title}</title>
-    <meta
-      name='description'
-      content="We're the leading provider of logistics and financing solutions for businesses of all sizes. We'll work with you to find the right solution for your needs."
-    />
-    <link rel='preconnect' href='https://fonts.googleapis.com' />
-    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
-    <link
-      href='https://fonts.googleapis.com/css2?family=ABeeZee&family=Space+Grotesk:wght@400;500;600;700&display=swap'
-      rel='stylesheet'
-    />
   </head>
 
   <body>

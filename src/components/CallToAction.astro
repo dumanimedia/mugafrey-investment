@@ -9,7 +9,11 @@ const optimizedImg = await getImage({ src: ctaImage });
   style={`background: linear-gradient(rgba(14, 20, 40, 0.6), rgba(14, 20, 40, 0.8)), url(${optimizedImg.src}) center center;`}
   class='bg-fixed bg-center'
 >
-  <div class='wrapper mt-10 py-20'>
+  <div
+    class='wrapper mt-10 py-20 aos-init aos-animate'
+    data-aos='fade-up'
+    data-aos-delay='400'
+  >
     <div class='section-header'>
       <span>Request a Callback</span>
       <h2>Request a Callback</h2>
@@ -18,6 +22,7 @@ const optimizedImg = await getImage({ src: ctaImage });
       </p>
     </div>
     <form
+      method='POST'
       class='sm:backdrop-blur-sm w-full flex items-center gap-x-3 gap-y-6 justify-between flex-wrap py-5 sm:px-5 sm:border-2 rounded-lg border-[var(--dark-green-color)]'
     >
       <div class='w-full lg:w-[calc(33.33%-16px)] relative'>
@@ -26,6 +31,7 @@ const optimizedImg = await getImage({ src: ctaImage });
           class='transition-all duration-300 w-full p-4 rounded-xl bg-[var(--background-color)] bg-opacity-40 text-[var(--tartiary-color)]'
           type='text'
           id='name'
+          name='name'
           placeholder='Full Name'
         />
       </div>
@@ -35,6 +41,7 @@ const optimizedImg = await getImage({ src: ctaImage });
           class='transition-all duration-300 w-full p-4 rounded-xl bg-[var(--background-color)] bg-opacity-40 text-[var(--tartiary-color)]'
           type='email'
           id='email'
+          name='email'
           placeholder='E-mail Address'
         />
       </div>
@@ -44,6 +51,7 @@ const optimizedImg = await getImage({ src: ctaImage });
           class='transition-all duration-300 w-full p-4 rounded-xl bg-[var(--background-color)] bg-opacity-40 text-[var(--tartiary-color)]'
           type='text'
           id='subject'
+          name='subject'
           placeholder='Subject'
         />
       </div>
